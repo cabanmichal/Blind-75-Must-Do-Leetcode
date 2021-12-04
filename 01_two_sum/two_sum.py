@@ -3,7 +3,7 @@
 Given an array of integers nums and an integer target, return indices
 of the two numbers such that they add up to target.
 """
-from typing import List
+from typing import List, Dict
 
 
 def two_sum(nums: List[int], target: int) -> List[int]:
@@ -15,7 +15,7 @@ def two_sum(nums: List[int], target: int) -> List[int]:
     >>> two_sum([3, 3], 6)
     [0, 1]
     """
-    checked = {}
+    checked: Dict[int, int] = {}
     for i, num in enumerate(nums):
         missing = target - num
         if missing in checked:
